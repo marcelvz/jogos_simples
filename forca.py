@@ -8,7 +8,7 @@ def forca():
 
 
   palavra_secreta = banco_palavras()
-  letras_acertadas = letras_certas(palavra_secreta)
+  letras_acertadas = ["_" for letra in palavra_secreta]
   
   enforcou = 6
   acertou = False
@@ -20,9 +20,9 @@ def forca():
       for letra in palavra_secreta:
         if (chute == letra):
           letras_acertadas[posicao] = chute
-        posicao = posicao + 1
+        posicao += 1
     else:
-      enforcou = enforcou - 1
+      enforcou -= 1
     print("************")
     print(letras_acertadas)
     print(f"Chances restantantes:{enforcou}")
@@ -40,6 +40,3 @@ def banco_palavras():
     for linha in arquivo:
       banco_de_palavras.append(linha.strip())
   return banco_de_palavras[random.randrange(0,len(banco_de_palavras))]
-  
-def letras_certas(palavra_secreta):
-  return ["_" for letra in palavra_secreta]
