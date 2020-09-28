@@ -1,7 +1,9 @@
 import random
 
 def forca():
-  
+  '''
+  Jogo de forca. Usa a função 'banco_de_palavras' para selecionar a palavra secreta.
+  '''
   print("***************")
   print("*Jogo da forca*")
   print("***************")
@@ -35,8 +37,12 @@ def forca():
 
 
 def banco_palavras():
+  '''
+  Le o arquivo texto com as palavras, separa em uma lista e retorna uma palavra escolhida aleatoriamente
+  '''
   banco_de_palavras = []
   with open("palavras.txt") as arquivo:  
     for linha in arquivo:
       banco_de_palavras.append(linha.strip())
-  return banco_de_palavras[random.randrange(0,len(banco_de_palavras))]
+  palavra_escolhida = banco_de_palavras[random.randrange(0,len(banco_de_palavras))]
+  return palavra_escolhida

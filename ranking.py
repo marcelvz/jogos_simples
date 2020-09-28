@@ -1,4 +1,8 @@
 def ranking():
+  ''' 
+  Função que faz a leitura do arquivo de texto onde estão registrados as pontuações e 
+  exibe a lista com os nomes e a pontuação.
+  '''
   tabela = []
   with open("registro.txt") as ranking:
     for linha in ranking:

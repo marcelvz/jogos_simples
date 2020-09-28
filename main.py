@@ -1,7 +1,7 @@
-'''Menu principal de jogos feitos como estudos iniciais de python
+"""Menu principal de jogos feitos como estudos iniciais de python
     Jogo 1 - Forca
     Jogo 2 - Advinhar um número entre 1 e 100
-    Ranking com a pontuação '''
+    Ranking com a pontuação """
 
 
 from advinhacao import advinhacao
