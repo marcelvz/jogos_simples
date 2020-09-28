@@ -1,6 +1,9 @@
 import random
 
 def advinhacao(nome):
+  '''
+  Jogo de advinhação. Um número aleatorio entre 1 e 100 é sorteado e o jogador tenta adivinhar o número escolhido
+  '''
   print("**********************")
   print("*Teste de advinhação *")
   print("**********************")
@@ -30,8 +33,9 @@ def advinhacao(nome):
         print("Errou! Seu chute foi maior")
       else:
         print("Errou! Seu chute foi menor")
-    tentativas = tentativas - 1
-    pontos = pontos - abs(chute - numero_secreto)
+    tentativas -= 1
+    pontos -= abs(chute - numero_secreto)
+
   print(f"Fim de jogo! \nO numero secreto é: {numero_secreto}\nSua pontuação: {pontos}")
  
   with open("registro.txt","a") as registro:
