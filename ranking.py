@@ -8,7 +8,8 @@ def ranking():
     for linha in ranking:
       tabela.append(linha.strip().partition(',')[::2])
 
-  print("*"*40)
+  print("*"*37)
   for jogador in tabela:
-    print(f"* Jogador: {jogador[0]}\t Pontos: {jogador[1]}\t*")
-  print("*"*40)  
+    print('* Jogador: {0:<10} Pontos: {1:<5} *'.format(jogador[0],jogador[1]))    
+  print("*"*37)
+  

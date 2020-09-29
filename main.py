@@ -8,9 +8,9 @@ from advinhacao import advinhacao
 from ranking import ranking
 from forca import forca
 
-print("****************")
-print("*******Olá******")
-print("****************")
+print("*"*20)
+print("{0:*^20}".format(' Olá '))
+print("*"*20)
 
 jogando = True
 nome = input("Digite seu nome\n").lower().strip()
@@ -28,3 +28,4 @@ while (jogando):
     print("Escolha invalida")
   if (input("Deseja continuar S ou N?\n").lower() != 's'):
     jogando = False
+
