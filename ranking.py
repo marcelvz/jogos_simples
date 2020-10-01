@@ -7,9 +7,11 @@ def ranking():
   with open("registro.txt") as ranking:
     for linha in ranking:
       tabela.append(linha.strip().partition(',')[::2])
+ 
 
   print("*"*37)
-  for jogador in tabela:
+  for jogador in sorted(tabela,key= lambda pontos: pontos[1],reverse= True):
     print('* Jogador: {0:<10} Pontos: {1:<5} *'.format(jogador[0],jogador[1]))    
   print("*"*37)
+
   
